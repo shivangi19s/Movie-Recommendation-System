@@ -1,6 +1,6 @@
 ## Movie Recommendation System
 
-This project is a movie recommendation system that recommends movies to users based on their search history. The system uses the Apriori algorithm to find frequent item sets, and then recommends movies that are similar to the one the user has searched for.
+This project is a movie recommendation system that recommends movies to users. The system uses the Apriori algorithm to find frequent item sets, and then recommends movies that are similar to the one the user has searched for.
 
 ### Technologies Used:
 
