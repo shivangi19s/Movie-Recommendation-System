@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{%  static 'css/recommendation.css' %}">
+</head>
+<body>
+    <form action="{% url 'recommend_movies' %}" method="post">
+		{% csrf_token %}
+		<input class="search__input" type="text" id="movie_name" name="movie_name" autocomplete="off" placeholder="Search for a movie to view recommendations">
+    	<input type="submit" value="GO" class="recbtn" id="recbtn">
+	</form>
+
+	<div class="default" id="default">
+		{%if input_movie %}
+		{% if input_movie_poster %}
+        <div class="item">
+			<p class="title">You Searched For: {{ input_movie }}</p>
+            <img src="{{ input_movie_poster }}" alt="{{ input_movie }}">
+        </div>
+        {% endif %}
+		{% if movies %}
+		<p class="title">Movies Recommended For You:</p>
+		<div class="Section1">
+				{% for mt, mp in movies %}
+					<div class="item">
+						<img src="{{ mp }}" alt="{{ mt }}">
+						<p class="title">{{ mt }}</p>
+					</div>
+				{% endfor %}
+		</div>
+		{% endif %}
+			{% if error_msg %}
+				<p class="title">{{error_msg}}</p>
+			{% endif %}
+		{% endif %}
+	</div>
+
+</body>
+</html>

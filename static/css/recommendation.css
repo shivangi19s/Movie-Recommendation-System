@@ -1,0 +1,94 @@
+body {
+  background: #121212;
+}
+.search__input {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 30%;
+  padding: 12px 24px;
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-size: 18px;
+  color: #fff;
+  line-height: 20px;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  transition: all 250ms ease-in-out;
+  transform-style: preserve-3d;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 95% center;
+}
+
+.search__input ::placeholder {
+  color: transparent;
+  letter-spacing: 1.5px;
+}
+
+.search__input:hover,
+.search__input:focus {
+  padding: 12px 0;
+  outline: 0;
+  color: #fff;
+  border: 1px solid transparent;
+  border-bottom: 4px solid #fff;
+  border-radius: 0;
+  background-position: 100% center;
+  background-color: transparent;
+}
+
+.recbtn {
+  position: absolute;
+  top: 15.5%;
+  left: 62%;
+  overflow: hidden;
+  width: 50px;
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 30px;
+  border-color: transparent;
+  background: transparent;
+  color: #fff;
+  font-family: 'Georgia', serif;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.default {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  background: transparent;
+  width: 100%;
+  height: 45%;
+  box-sizing: border-box;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.default img {
+  height: 200px;
+}
+
+.title {
+  margin-top: 10px;
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+  color: #fff;
+}
+
+.Section1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
